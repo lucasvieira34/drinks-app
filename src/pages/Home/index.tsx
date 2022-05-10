@@ -18,14 +18,23 @@ export default function Home() {
             </View>
 
             <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>Monitore, organize seus gastos de qualquer lugar!</Text>
-                <Text style={styles.text}>Faça o login para começar</Text>
+                <Text style={styles.title}>Menu Drink's</Text>
+                <Text style={styles.subtitle}>Lucas Teixeira @ Copyright 2022</Text>
 
-                <TouchableOpacity
-                    style={styles.button}
-                    onPress={() => navigation.navigate('Signin')}>
-                    <Text style={styles.buttonText}>Acessar</Text>
-                </TouchableOpacity>
+                <Animatable.View style={styles.containerButton}>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => navigation.navigate('Signin')}>
+                        <Text style={styles.buttonText}>Opções</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={() => navigation.navigate('Signin')}>
+                        <Text style={styles.buttonText}>Receitas</Text>
+                    </TouchableOpacity>
+                </Animatable.View>
+
+                <Text style={styles.footer}>Lucas Teixeira @ Copyright 2022</Text>
             </Animatable.View>
 
         </View>
@@ -35,11 +44,11 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#38A69D'
+        backgroundColor: '#FA8021'
     },
     containerLogo: {
         flex: 2,
-        backgroundColor: '#38A69D',
+        backgroundColor: '#FA8021',
         justifyContent: 'center',
         alignContent: 'center'
     },
@@ -57,17 +66,29 @@ const styles = StyleSheet.create({
         marginTop: 28,
         marginBottom: 12
     },
-    text: {
-        color: '#A1A1A1'
+    subtitle: {
+        color: '#A1A1A1',
+    },
+    footer: {
+        color: '#A1A1A1',
+        marginTop: '4%',
+        alignSelf: 'center'
+    },
+    containerButton: {
+        flexDirection: 'row',
+        // backgroundColor: 'red',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        marginVertical: '5%',
     },
     button: {
-        position: 'absolute',
-        backgroundColor: '#38A69D',
+        backgroundColor: '#FA8021',
+        margin: 5,
         borderRadius: 50,
-        paddingVertical: 8,
-        width: '60%',
-        alignSelf: 'center',
-        bottom: '15%',
+        paddingStart: 8,
+        width: '45%',
+        height: '55%',
         alignItems: 'center',
         justifyContent: 'center'
     },
