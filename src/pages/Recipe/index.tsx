@@ -2,36 +2,12 @@ import { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from "react-native";
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from "@react-navigation/native";
+import { drinkList } from "./types";
 
 export default function Recipe() {
 
     const navigation = useNavigation();
-    const [drinks, setDrinks] = useState([
-        {
-            id: '1',
-            name: 'Bramble',
-            descricao: 'gin, açúcar, limão siciliano e licor de amora.',
-            receita: '50ml gin, 25ml açúcar, 25ml limão siciliano, 20ml licor de amora.'
-        },
-        {
-            id: '2',
-            name: 'Lagoa Azul',
-            descricao: 'vodka, curaçau blue, limão, açúcar e sprite.',
-            receita: '50ml vodka, 25ml curaçau blue, 25ml limão, 10ml açúcar e 60ml sprite.'
-        },
-        {
-            id: '3',
-            name: 'Lagoa Verde',
-            descricao: 'vodka, limão siciliano, suco de abacaxi e licor de menta.',
-            receita: '60ml vodka, 20ml limão siciliano, 150ml suco de abacaxi e 20ml licor de menta.'
-        },
-        {
-            id: '4',
-            name: 'Alexander',
-            descricao: 'conhaque, creme de leite e creme de cacau.',
-            receita: '30 ml conhaque, 30ml creme de leite e 30ml creme de cacau.'
-        },
-    ])
+    const [drinks, setDrinks] = useState(drinkList)
 
     return (
         <View style={styles.container}>
@@ -52,18 +28,21 @@ export default function Recipe() {
 
             <Animatable.View animation="fadeInUpBig" style={styles.containerList}>
 
-                <FlatList
-                    keyExtractor={(item) => item.id}
-                    data={drinks}
-                    renderItem={({ item }) => (
-                        <TouchableOpacity onPress={() => navigation.navigate('Drink', { item })}>
-                            <Text style={styles.item}>{item.name}</Text>
-                        </TouchableOpacity>
-                    )}
-                />
+                <Animatable.View delay={700} animation="bounceInLeft">
+                    <FlatList
+                        keyExtractor={(item) => item.id}
+                        data={drinks}
+                        renderItem={({ item }) => (
+                            <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Drink', { item })}>
+                                <Text>{item.name}</Text>
+                                <Text>{item.descricao}</Text>
+                            </TouchableOpacity>
+                        )}
+                    />
+                </Animatable.View>
 
             </Animatable.View>
-        </View>
+        </View >
     );
 }
 
@@ -96,26 +75,10 @@ const styles = StyleSheet.create({
         paddingStart: '5%',
         paddingEnd: '5%'
     },
-    list: {
-        backgroundColor: 'gray',
-        marginTop: '10%'
-    },
     item: {
         marginTop: 24,
         padding: 30,
         backgroundColor: 'pink',
         fontSize: 24
-    },
-    modalToggle: {
-        marginTop: 20,
-        marginBottom: 10,
-        borderWidth: 1,
-        borderColor: '#F2F2F2',
-        padding: 10,
-        borderRadius: 10,
-        alignSelf: 'center'
-    },
-    modal: {
-        flex: 1
     }
 })
