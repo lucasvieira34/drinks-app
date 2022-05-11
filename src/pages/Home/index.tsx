@@ -24,12 +24,12 @@ export default function Home() {
                 <Animatable.View style={styles.containerButton}>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => navigation.navigate('Signin')}>
+                        onPress={() => navigation.navigate('Recipe')}>
                         <Text style={styles.buttonText}>Opções</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => navigation.navigate('Signin')}>
+                        onPress={() => navigation.navigate('Recipe')}>
                         <Text style={styles.buttonText}>Receitas</Text>
                     </TouchableOpacity>
                 </Animatable.View>
@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
     },
     containerButton: {
         flexDirection: 'row',
-        // backgroundColor: 'red',
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
