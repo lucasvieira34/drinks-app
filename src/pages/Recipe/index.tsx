@@ -1,13 +1,16 @@
-import { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, FlatList, Image, StatusBar } from "react-native";
+import React, { useState } from "react";
+import { View, Text, StyleSheet, TouchableOpacity, FlatList, Image, StatusBar, Animated } from "react-native";
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from "@react-navigation/native";
 import { drinkList } from "./types";
 
 export default function Recipe() {
 
+    const scrollY = React.useRef(new Animated.Value(0)).current;
+
     const navigation = useNavigation();
     const [drinks, setDrinks] = useState(drinkList)
+    const ITEM_SIZE = 70 + 20 * 3
 
     return (
         <View style={styles.container}>
@@ -29,11 +32,37 @@ export default function Recipe() {
             <Animatable.View animation="fadeInUpBig" style={styles.containerList}>
 
                 <Animatable.View delay={700} animation="bounceInLeft">
-                    <FlatList
+                    <Animated.FlatList
+                        onScroll={Animated.event(
+                            [{ nativeEvent: { contentOffset: { y: scrollY } } }],
+                            { useNativeDriver: true }
+                        )}
                         keyExtractor={(item) => item.id}
                         data={drinks}
-                        renderItem={({ item }) => (
-                            <View style={styles.item}>
+                        renderItem={({ item, index }) => {
+
+                            const inputRange = [
+                                -1,
+                                0,
+                                ITEM_SIZE * index,
+                                ITEM_SIZE * (index + 2)
+                            ]
+                            const opacityInputRange = [
+                                -1,
+                                0,
+                                ITEM_SIZE * index,
+                                ITEM_SIZE * (index + 1)
+                            ]
+                            const scale = scrollY.interpolate({
+                                inputRange,
+                                outputRange: [1, 1, 1, 0]
+                            })
+                            const opacity = scrollY.interpolate({
+                                inputRange: opacityInputRange,
+                                outputRange: [1, 1, 1, 0]
+                            })
+
+                            return <Animated.View style={[styles.item, { opacity, transform: [{ scale }] }]}>
                                 <TouchableOpacity onPress={() => navigation.navigate('Drink', { item })}>
                                     <View style={{ flexDirection: 'row' }}>
                                         <Image
@@ -46,8 +75,8 @@ export default function Recipe() {
                                         </View>
                                     </View>
                                 </TouchableOpacity>
-                            </View>
-                        )}
+                            </Animated.View>
+                        }}
                     />
                 </Animatable.View>
 
@@ -90,10 +119,10 @@ const styles = StyleSheet.create({
         padding: 30,
         borderRadius: 12,
         shadowColor: 'black',
-        shadowOpacity: 0.26,
-        shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 10,
+        shadowOpacity: 1,
+        shadowOffset: { width: 0, height: 5 },
+        shadowRadius: 100,
         elevation: 3,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     }
 })

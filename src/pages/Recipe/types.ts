@@ -47,4 +47,12 @@ export const drinkList = [
       "https://i.pinimg.com/originals/94/a1/09/94a109e32022d67c50e1647bc21e6f16.png",
     receita: ["30ml conhaque", "30ml creme de leite", "30ml licor de cacau"],
   },
+  {
+    id: "5",
+    name: "Alexander",
+    descricao: "conhaque, creme de leite e creme de cacau.",
+    image:
+      "https://i.pinimg.com/originals/94/a1/09/94a109e32022d67c50e1647bc21e6f16.png",
+    receita: ["30ml conhaque", "30ml creme de leite", "30ml licor de cacau"],
+  },
 ];
