@@ -2,7 +2,7 @@ export const drinkList = [
   {
     id: "1",
     name: "Bramble",
-    descricao: "gin, açúcar, limão siciliano e licor de amora.",
+    descricao: "gin, limão siciliano, licor de amora e açúcar.",
     image: require("../../assets/drinks/generic-drink.png"),
     receita: [
       "50ml gin",
@@ -14,7 +14,7 @@ export const drinkList = [
   {
     id: "2",
     name: "Lagoa Azul",
-    descricao: "vodka, curaçau blue, limão, açúcar e sprite.",
+    descricao: "vodka, sprite, curaçau blue, limão e açúcar.",
     image: require("../../assets/drinks/lagoa-azul.png"),
     receita: [
       "50ml vodka",
@@ -57,8 +57,7 @@ export const drinkList = [
   {
     id: "6",
     name: "Piña Colada",
-    descricao:
-      "rum, leite de coco, suco de abacaxi, leite condensado e chocolate.",
+    descricao: "rum, leite de coco, suco de abacaxi e leite condensado.",
     image: require("../../assets/drinks/pina-colada.png"),
     receita: [
       "60ml rum",
@@ -84,7 +83,7 @@ export const drinkList = [
   {
     id: "8",
     name: "Caribeño Drink",
-    descricao: "rum, água de coco, limão taiti e açúcar.",
+    descricao: "rum, água de coco, limão e açúcar.",
     image: require("../../assets/drinks/coconut.png"),
     receita: [
       "60ml rum",
@@ -96,7 +95,7 @@ export const drinkList = [
   {
     id: "9",
     name: "Cuba Libre",
-    descricao: "rum, coca-cola e limão taiti.",
+    descricao: "rum, coca-cola e limão.",
     image: require("../../assets/drinks/cuba-libre.png"),
     receita: ["50ml rum", "1/2 limão taiti", "Refri (completar)"],
   },

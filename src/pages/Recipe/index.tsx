@@ -37,6 +37,7 @@ export default function Recipe() {
                             [{ nativeEvent: { contentOffset: { y: scrollY } } }],
                             { useNativeDriver: true }
                         )}
+                        showsVerticalScrollIndicator={false}
                         keyExtractor={(item) => item.id}
                         data={drinks}
                         renderItem={({ item, index }) => {
@@ -114,7 +115,8 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         paddingStart: '5%',
-        paddingEnd: '5%'
+        paddingEnd: '5%',
+        paddingBottom: 24
     },
     item: {
         marginTop: 24,
@@ -124,19 +126,20 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 5 },
         shadowRadius: 100,
         elevation: 3,
-        backgroundColor: 'white',
+        backgroundColor: '#F5F5F5',
     },
     containerText: {
         marginVertical: 20,
-        backgroundColor: 'yellow'
+        width: '81%',
+        flexWrap: 'nowrap'
     },
     itemName: {
         fontSize: 22,
         fontWeight: '700'
     },
     itemDescricao: {
-        fontSize: 18,
-        opacity: .7
+        fontSize: 17,
+        opacity: .4,
     },
     containerImage: {
         marginVertical: 20,
