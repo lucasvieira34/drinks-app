@@ -67,11 +67,11 @@ export default function Recipe() {
                                     <View style={{ flexDirection: 'row' }}>
                                         <Image
                                             source={{ uri: item.image }}
-                                            style={{ width: 70, height: 70, borderRadius: 70, marginRight: 10 }}
+                                            style={styles.itemImage}
                                         />
                                         <View>
-                                            <Text style={{ fontSize: 22, fontWeight: '700' }}>{item.name}</Text>
-                                            <Text style={{ fontSize: 18, opacity: .7 }}>{item.descricao}</Text>
+                                            <Text style={styles.itemName}>{item.name}</Text>
+                                            <Text style={styles.itemDescricao}>{item.descricao}</Text>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -124,5 +124,19 @@ const styles = StyleSheet.create({
         shadowRadius: 100,
         elevation: 3,
         backgroundColor: 'white',
+    },
+    itemName: {
+        fontSize: 22,
+        fontWeight: '700'
+    },
+    itemDescricao: {
+        fontSize: 18,
+        opacity: .7
+    },
+    itemImage: {
+        width: 70,
+        height: 70,
+        borderRadius: 70,
+        marginRight: 10
     }
 })
