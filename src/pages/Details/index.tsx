@@ -24,6 +24,7 @@ export default function Details({ route, navigation }: any) {
                 <View style={styles.containerText}>
                     <Text style={styles.itemName}>{item.name}</Text>
                     {renderText(item)}
+                    <Text style={styles.itemTaca}>Taça: {item.taca}</Text>
                 </View>
 
             </Animatable.View>
@@ -49,8 +50,9 @@ const styles = StyleSheet.create({
         elevation: 3,
     },
     containerImage: {
+        // backgroundColor: 'green',
         width: '90%',
-        height: '50%',
+        height: '45%',
         marginVertical: 20,
     },
     image: {
@@ -59,6 +61,7 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     containerText: {
+        // backgroundColor: 'blue',
         flexWrap: 'nowrap',
         width: '90%',
         alignItems: 'center'
@@ -75,4 +78,9 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         fontSize: 20,
     },
+    itemTaca: {
+        marginTop: 5,
+        fontStyle: "italic",
+        opacity: .4
+    }
 })
