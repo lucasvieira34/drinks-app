@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     },
     containerText: {
         marginVertical: 20,
-        width: '81%',
+        width: '75%',
         flexWrap: 'nowrap'
     },
     itemName: {
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     containerImage: {
         marginVertical: 20,
         marginHorizontal: 10,
-        width: 50,
+        width: 60,
         height: 70,
         justifyContent: 'center',
         alignItems: 'center'

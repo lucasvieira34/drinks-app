@@ -34,19 +34,21 @@ export default function Drink({ route, navigation }: any) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: '#FFF',
         backgroundColor: 'gray'
     },
     containerBox: {
         flex: 1,
-        backgroundColor: '#FFF',
+        backgroundColor: '#F5F5F5',
         borderRadius: 25,
         marginHorizontal: '5%',
         marginVertical: '10%',
-        alignItems: 'center'
+        alignItems: 'center',
+        shadowOpacity: 1,
+        shadowOffset: { width: 0, height: 5 },
+        shadowRadius: 100,
+        elevation: 3,
     },
     containerImage: {
-        // backgroundColor: 'red',
         width: '90%',
         height: '50%',
         marginVertical: 20,
@@ -57,21 +59,19 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     containerText: {
-        // backgroundColor: 'blue',
         flexWrap: 'nowrap',
         width: '90%',
         alignItems: 'center'
     },
     itemName: {
-        // backgroundColor: 'green',
-        marginVertical: 10,
+        marginTop: 10,
+        marginBottom: 15,
         fontSize: 35,
         fontWeight: '700',
     },
     itemReceita: {
-        // backgroundColor: 'yellow',
         color: 'gray',
-        marginTop: 10,
+        marginBottom: 10,
         fontWeight: '700',
         fontSize: 20,
     },
