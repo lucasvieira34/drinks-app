@@ -3,8 +3,7 @@ export const drinkList = [
     id: "1",
     name: "Bramble",
     descricao: "gin, açúcar, limão siciliano e licor de amora.",
-    image:
-      "https://i.pinimg.com/originals/94/a1/09/94a109e32022d67c50e1647bc21e6f16.png",
+    image: require("../../assets/drinks/generic-drink.png"),
     receita: [
       "50ml gin",
       "25ml açúcar",
@@ -16,8 +15,7 @@ export const drinkList = [
     id: "2",
     name: "Lagoa Azul",
     descricao: "vodka, curaçau blue, limão, açúcar e sprite.",
-    image:
-      "https://i.pinimg.com/originals/94/a1/09/94a109e32022d67c50e1647bc21e6f16.png",
+    image: require("../../assets/drinks/lagoa-azul.png"),
     receita: [
       "50ml vodka",
       "25ml curaçau blue",
@@ -30,8 +28,7 @@ export const drinkList = [
     id: "3",
     name: "Lagoa Verde",
     descricao: "vodka, limão siciliano, suco de abacaxi e licor de menta.",
-    image:
-      "https://i.pinimg.com/originals/94/a1/09/94a109e32022d67c50e1647bc21e6f16.png",
+    image: require("../../assets/drinks/lagoa-verde.png"),
     receita: [
       "60ml vodka",
       "20ml limão siciliano",
@@ -43,16 +40,64 @@ export const drinkList = [
     id: "4",
     name: "Alexander",
     descricao: "conhaque, creme de leite e creme de cacau.",
-    image:
-      "https://i.pinimg.com/originals/94/a1/09/94a109e32022d67c50e1647bc21e6f16.png",
+    image: require("../../assets/drinks/alexander.png"),
     receita: ["30ml conhaque", "30ml creme de leite", "30ml licor de cacau"],
   },
   {
     id: "5",
-    name: "Alexander",
-    descricao: "conhaque, creme de leite e creme de cacau.",
-    image:
-      "https://i.pinimg.com/originals/94/a1/09/94a109e32022d67c50e1647bc21e6f16.png",
-    receita: ["30ml conhaque", "30ml creme de leite", "30ml licor de cacau"],
+    name: "Grasshopper",
+    descricao: "licor de menta, licor de cacau e creme de leite.",
+    image: require("../../assets/drinks/grasshopper.png"),
+    receita: [
+      "50ml creme de leite",
+      "50ml licor de menta",
+      "30ml licor de cacau",
+    ],
+  },
+  {
+    id: "6",
+    name: "Piña Colada",
+    descricao:
+      "rum, leite de coco, suco de abacaxi, leite condensado e chocolate.",
+    image: require("../../assets/drinks/pina-colada.png"),
+    receita: [
+      "60ml rum",
+      "30ml leite de coco",
+      "90ml suco de abacaxi",
+      "50ml leite condensado",
+      "chocolate",
+    ],
+  },
+  {
+    id: "7",
+    name: "Blue Hawaii",
+    descricao: "rum, suco de abacaxi, curaçau blue, leite de coco e açúcar.",
+    image: require("../../assets/drinks/blue-hawaii.png"),
+    receita: [
+      "50ml rum",
+      "100ml suco de abacaxi",
+      "50ml curaçau blue",
+      "50ml leite de coco",
+      "3 colheres açúcar",
+    ],
+  },
+  {
+    id: "8",
+    name: "Caribeño Drink",
+    descricao: "rum, água de coco, limão taiti e açúcar.",
+    image: require("../../assets/drinks/coconut.png"),
+    receita: [
+      "60ml rum",
+      "5ml limão taiti",
+      "25ml açúcar",
+      "120ml água de coco",
+    ],
+  },
+  {
+    id: "9",
+    name: "Cuba Libre",
+    descricao: "rum, coca-cola e limão taiti.",
+    image: require("../../assets/drinks/cuba-libre.png"),
+    receita: ["50ml rum", "1/2 limão taiti", "Refri (completar)"],
   },
 ];

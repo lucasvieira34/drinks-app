@@ -65,11 +65,13 @@ export default function Recipe() {
                             return <Animated.View style={[styles.item, { opacity, transform: [{ scale }] }]}>
                                 <TouchableOpacity onPress={() => navigation.navigate('Drink', { item })}>
                                     <View style={{ flexDirection: 'row' }}>
-                                        <Image
-                                            source={{ uri: item.image }}
-                                            style={styles.itemImage}
-                                        />
-                                        <View>
+                                        <View style={styles.containerImage}>
+                                            <Image
+                                                source={item.image}
+                                                style={styles.itemImage}
+                                            />
+                                        </View>
+                                        <View style={styles.containerText}>
                                             <Text style={styles.itemName}>{item.name}</Text>
                                             <Text style={styles.itemDescricao}>{item.descricao}</Text>
                                         </View>
@@ -116,7 +118,6 @@ const styles = StyleSheet.create({
     },
     item: {
         marginTop: 24,
-        padding: 30,
         borderRadius: 12,
         shadowColor: 'black',
         shadowOpacity: 1,
@@ -124,6 +125,10 @@ const styles = StyleSheet.create({
         shadowRadius: 100,
         elevation: 3,
         backgroundColor: 'white',
+    },
+    containerText: {
+        marginVertical: 20,
+        backgroundColor: 'yellow'
     },
     itemName: {
         fontSize: 22,
@@ -133,10 +138,17 @@ const styles = StyleSheet.create({
         fontSize: 18,
         opacity: .7
     },
-    itemImage: {
-        width: 70,
+    containerImage: {
+        marginVertical: 20,
+        marginHorizontal: 10,
+        width: 50,
         height: 70,
-        borderRadius: 70,
-        marginRight: 10
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    itemImage: {
+        resizeMode: 'contain',
+        width: '100%',
+        height: '100%',
     }
 })
