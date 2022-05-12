@@ -15,7 +15,7 @@ export default function Drinks() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Animatable.Text animation="fadeInLeft" delay={500} style={styles.headerMessage}>Opções</Animatable.Text>
+                <Animatable.Text animation="fadeInLeft" delay={500} style={styles.headerMessage}>OPÇÕES</Animatable.Text>
 
                 <View style={styles.headerImage}>
                     <Animatable.Image

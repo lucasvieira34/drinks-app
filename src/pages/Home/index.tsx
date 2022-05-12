@@ -9,23 +9,24 @@ export default function Home() {
         <View style={styles.container}>
 
             <View style={styles.containerLogo}>
-                <Animatable.Image
-                    animation="flipInY"
-                    source={require('../../assets/logo.png')}
-                    style={{ width: '100%' }}
-                    resizeMode="contain"
-                />
+                <View style={styles.containerImage}>
+                    <Animatable.Image
+                        animation="flipInY"
+                        source={require('../../assets/logo.png')}
+                        style={styles.image}
+                    />
+                </View>
             </View>
 
             <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
                 <Text style={styles.title}>Menu Drink's</Text>
                 <Text style={styles.subtitle}>Beba com Moderação. Se for dirigir, não beba.</Text>
 
-                <Animatable.View style={styles.containerButton}>
+                <Animatable.View style={styles.containerButton} animation="bounceIn" delay={1000}>
                     <TouchableOpacity
                         style={styles.button}
                         onPress={() => navigation.navigate('Drinks')}>
-                        <Text style={styles.buttonText}>Opções</Text>
+                        <Text style={styles.buttonText}>OPÇÕES</Text>
                     </TouchableOpacity>
                 </Animatable.View>
 
@@ -39,13 +40,23 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FA8021'
+        backgroundColor: '#c5dafa'
     },
     containerLogo: {
         flex: 2,
-        backgroundColor: '#FA8021',
+        backgroundColor: '#c5dafa',
         justifyContent: 'center',
-        alignContent: 'center'
+        alignContent: 'center',
+    },
+    containerImage: {
+        marginHorizontal: '5%',
+        width: '90%',
+        height: '100%',
+    },
+    image: {
+        resizeMode: 'contain',
+        width: '100%',
+        height: '100%',
     },
     containerForm: {
         flex: 1,
@@ -77,7 +88,7 @@ const styles = StyleSheet.create({
         marginVertical: '5%',
     },
     button: {
-        backgroundColor: '#FA8021',
+        backgroundColor: '#4a87e8',
         margin: 5,
         borderRadius: 50,
         paddingStart: 8,
