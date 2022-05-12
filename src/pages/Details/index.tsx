@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import * as Animatable from 'react-native-animatable';
 
-export default function Drink({ route, navigation }: any) {
+export default function Details({ route, navigation }: any) {
     const { item } = route.params;
 
     function renderText(item: any) {

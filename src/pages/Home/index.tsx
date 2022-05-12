@@ -19,18 +19,13 @@ export default function Home() {
 
             <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
                 <Text style={styles.title}>Menu Drink's</Text>
-                <Text style={styles.subtitle}>Lucas Teixeira @ Copyright 2022</Text>
+                <Text style={styles.subtitle}>Beba com Moderação. Se for dirigir, não beba.</Text>
 
                 <Animatable.View style={styles.containerButton}>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => navigation.navigate('Recipe')}>
+                        onPress={() => navigation.navigate('Drinks')}>
                         <Text style={styles.buttonText}>Opções</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.button}
-                        onPress={() => navigation.navigate('Recipe')}>
-                        <Text style={styles.buttonText}>Receitas</Text>
                     </TouchableOpacity>
                 </Animatable.View>
 
@@ -86,10 +81,10 @@ const styles = StyleSheet.create({
         margin: 5,
         borderRadius: 50,
         paddingStart: 8,
-        width: '45%',
+        width: '60%',
         height: '55%',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     buttonText: {
         fontSize: 18,

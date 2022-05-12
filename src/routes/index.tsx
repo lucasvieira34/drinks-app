@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from '../pages/Home';
-import Recipe from '../pages/Recipe';
-import Drink from '../pages/Drink';
+import Drinks from '../pages/Drinks';
+import Details from '../pages/Details';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,13 +15,13 @@ export default function Routes() {
                 options={{ headerShown: false }}
             />
             <Stack.Screen
-                name='Recipe'
-                component={Recipe}
+                name='Drinks'
+                component={Drinks}
                 options={{ headerShown: false }}
             />
             <Stack.Screen
-                name='Drink'
-                component={Drink}
+                name='Details'
+                component={Details}
                 options={{ headerShown: false }}
             />
         </Stack.Navigator>

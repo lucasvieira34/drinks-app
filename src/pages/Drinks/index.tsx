@@ -4,7 +4,7 @@ import * as Animatable from 'react-native-animatable';
 import { useNavigation } from "@react-navigation/native";
 import { drinkList } from "./types";
 
-export default function Recipe() {
+export default function Drinks() {
 
     const scrollY = React.useRef(new Animated.Value(0)).current;
 
@@ -64,7 +64,7 @@ export default function Recipe() {
                             })
 
                             return <Animated.View style={[styles.item, { opacity, transform: [{ scale }] }]}>
-                                <TouchableOpacity onPress={() => navigation.navigate('Drink', { item })}>
+                                <TouchableOpacity onPress={() => navigation.navigate('Details', { item })}>
                                     <View style={{ flexDirection: 'row' }}>
                                         <View style={styles.containerImage}>
                                             <Image
