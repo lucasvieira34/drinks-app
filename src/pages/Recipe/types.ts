@@ -64,7 +64,7 @@ export const drinkList = [
       "30ml leite de coco",
       "90ml suco de abacaxi",
       "50ml leite condensado",
-      "chocolate",
+      "Calda de Chocolate",
     ],
   },
   {
