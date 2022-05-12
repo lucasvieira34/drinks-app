@@ -40,11 +40,11 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#c5dafa'
+        backgroundColor: '#C5DAFA'
     },
     containerLogo: {
         flex: 2,
-        backgroundColor: '#c5dafa',
+        backgroundColor: '#C5DAFA',
         justifyContent: 'center',
         alignContent: 'center',
     },
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         marginVertical: '5%',
     },
     button: {
-        backgroundColor: '#4a87e8',
+        backgroundColor: '#4A87E8',
         margin: 5,
         borderRadius: 50,
         paddingStart: 8,

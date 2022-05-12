@@ -22,7 +22,7 @@ export default function Drinks() {
                         animation="flipInY"
                         delay={600}
                         source={require('../../assets/drinks.png')}
-                        style={{ width: '100%', marginLeft: '10%' }}
+                        style={{ width: '100%' }}
                         resizeMode="contain"
                     />
                 </View>
@@ -91,22 +91,23 @@ export default function Drinks() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#66CCFF'
+        backgroundColor: '#4A87E8'
     },
     header: {
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-around',
         marginTop: '10%',
         marginBottom: '8%',
-        paddingStart: '5%',
+        paddingHorizontal: '5%',
         height: '10%'
     },
     headerImage: {
-        width: '45%'
+        width: '60%'
     },
     headerMessage: {
         fontSize: 35,
-        fontWeight: 'bold',
+        fontWeight: '800',
         color: '#FFF'
     },
     containerList: {
