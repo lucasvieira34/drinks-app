@@ -10,6 +10,12 @@ export default function Details({ route, navigation }: any) {
         });
     }
 
+    function renderTaca(item: any) {
+        if (item.taca) {
+            return <Text style={styles.itemTaca}>Taça: {item.taca}</Text>
+        }
+    }
+
     return (
         <View style={styles.container}>
             <Animatable.View animation="fadeInUpBig" style={styles.containerBox}>
@@ -24,7 +30,7 @@ export default function Details({ route, navigation }: any) {
                 <View style={styles.containerText}>
                     <Text style={styles.itemName}>{item.name}</Text>
                     {renderText(item)}
-                    <Text style={styles.itemTaca}>Taça: {item.taca}</Text>
+                    {renderTaca(item)}
                 </View>
 
             </Animatable.View>
